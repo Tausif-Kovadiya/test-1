@@ -17,13 +17,15 @@
           .replace(/[^a-z ]/gi, "")
           .split(" ")
           .sort((a, b) => b.length - a.length);
-      let finalArray = sortedArray
+
+      let finalArray = sortedArray.length > 0 && sortedArray
         .filter((w) => w.length === a[0].length)
         .sort(
           (a, b) => b.match(/[aeiou]/gi).length - a.match(/[aeiou]/gi).length
         );
 
-      console.log(finalArray[0]);
+      console.log(finalArray[0]); //final output
+
     </script>
   </body>
 </html>
