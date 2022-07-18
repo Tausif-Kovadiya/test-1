@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str =
+        "Smart peop1le le12arn from everyth&6$5)9ing and ev1eryone, avera1n7ge people from t7heir expe*86rienc*e, stupid people already, have all the answers";
+
+      let sortedArray =
+        str.length &&
+        str
+          .replace(/[^a-z ]/gi, "")
+          .split(" ")
+          .sort((a, b) => b.length - a.length);
+      let finalArray = sortedArray
+        .filter((w) => w.length === a[0].length)
+        .sort(
+          (a, b) => b.match(/[aeiou]/gi).length - a.match(/[aeiou]/gi).length
+        );
+
+      console.log(finalArray[0]);
+    </script>
+  </body>
+</html>
